@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 
 const Navbar = ( {appdata , logo}) => {
     const [numberstate, setNumberstate]= useState(0)
@@ -8,12 +8,16 @@ const Navbar = ( {appdata , logo}) => {
     console.log(numberstate)
     console.log(stringstate)
     console.log(arraystate)
-
-
+    const [count , setCount] =useState(0);
+    useEffect(()=>{
+      console.log("Count is " +count)
+    } ,[count])
   return (
     <>
     
-    {appdata.appname } {logo}
+   {/* {appdata.appname } {logo} */}
+   <button className ='w-[6 rem] h-[4rem]  bg-blue-500 text-white' onclick={() => {setCount(count +1)}}>
+   Count{count}</button>
     </>
 
   )
