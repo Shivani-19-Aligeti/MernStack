@@ -24,4 +24,4 @@ address:{
 })
 
 const Orders = mongoose.model("Order" , OrdersSchema)
-module.exports = mongoose
+module.exports = Orders

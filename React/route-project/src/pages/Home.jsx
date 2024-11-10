@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-      <>
-          <p>asdfghjkljhgfdsfghgfds</p>
-      </>
-  )
-}
+    <div>
+      <Navbar />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
