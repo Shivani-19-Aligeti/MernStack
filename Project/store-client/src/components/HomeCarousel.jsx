@@ -13,7 +13,7 @@ const HomeCarousel = () => {
           {/* <p className="legend">Mobiles</p> */}
 
           <div className="absolute left-2 bottom-2 flex flex-col bg-white rounded-md">
-            <div className="px-6 py-8 sm:p-10 sm:pb-6">
+            <div className="px-6 py-0 sm:p-10 sm:pb-6">
               <div className="grid items-center justify-center w-full grid-cols-1 text-left">
                 <div>
                   <h2 className="text-lg font-medium tracking-tighter text-gray-600 lg:text-3xl">
@@ -22,7 +22,7 @@ const HomeCarousel = () => {
                 </div>
                 <div className="mt-6">
                   <p>
-                    <span className="text-5xl font-light tracking-tight text-black">
+                    <span className="text-5xl font-semibold tracking-tight text-purple-600">
                       40%
                     </span>
                     <span className="text-base font-medium text-gray-500">
@@ -51,7 +51,7 @@ const HomeCarousel = () => {
                 </div>
                 <div className="mt-6">
                   <p>
-                    <span className="text-5xl font-light tracking-tight text-black">
+                    <span className="text-5xl font-semibold tracking-tight text-purple-600">
                       30%
                     </span>
                     <span className="text-base font-medium text-gray-500">
@@ -80,7 +80,7 @@ const HomeCarousel = () => {
                 </div>
                 <div className="mt-6">
                   <p>
-                    <span className="text-5xl font-light tracking-tight text-black">
+                    <span className="text-5xl font-semibold tracking-tight text-purple-600">
                       50%
                     </span>
                     <span className="text-base font-medium text-gray-500">

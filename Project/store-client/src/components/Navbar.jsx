@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const Linksdata = [
     {
-      title: "Dashboard",
-      path: "/admin/dashboard",
+      title: "Home",
+      path: "/",
     },
     {
       title: "Products",
@@ -27,7 +27,7 @@ const Navbar = () => {
               <NavLink
                 to={link.path}
                 key={index}
-                className="h-[65%] w-20 hover:bg-purple-500 hover:text-white flex justify-center items-center rounded-sm"
+                className="h-[65%] w-20 hover:bg-purple-500/90 hover:text-white flex justify-center items-center rounded-sm"
               >
                 {link.title}
               </NavLink>
