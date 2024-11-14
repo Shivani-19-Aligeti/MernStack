@@ -17,7 +17,7 @@ router.post("/register", async (req, res) => {
     const exisitingemail = await Users.findOne({ email });
     if (exisitingemail) {
       return res
-        .status(500)
+        .status(409)
         .json({ message: `User with ${email} already exists !` });
     }
 
@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
     const exisitingphone = await Users.findOne({ phone });
     if (exisitingphone) {
       return res
-        .status(500)
+        .status(409)
         .json({ message: `User with ${phone} already exists !` });
     }
     const salt = await bcrypt.genSalt(10);
@@ -34,6 +34,7 @@ router.post("/register", async (req, res) => {
       name,
       email,
       phone,
+      role: "USER",
       password: hashedpassword,
     });
     await newuser.save();
@@ -66,7 +67,11 @@ router.post("/login", async (req, res) => {
     //Generate JWT
     const secretkey = "1811321";
     const token = jwt.sign(
-      { email: email, exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7 },
+      {
+        email: email,
+        role: user.role,
+        exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7,
+      },
       secretkey
     );
     return res.status(200).json({ message: "login success", token: token });

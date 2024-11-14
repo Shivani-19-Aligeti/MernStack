@@ -11,5 +11,4 @@ const WebLayout = () => {
     </>
   );
 };
-
 export default WebLayout;
