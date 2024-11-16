@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Users = require("../models/UsersModel");
+const Users = require("../models/UserModel");
 const bcrypt = require("bcrypt");
 
 router.get("/count", async (req, res) => {

@@ -10,6 +10,7 @@ import AdminProducts from "./pages/Admin/AdminProducts";
 import AdminOrders from "./pages/Admin/AdminOrder";
 import AdminUsers from "./pages/Admin/AdminUser";
 import AdminSettings from "./pages/Admin/AdminSettings";
+
 // import {} from 'react'
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/temp" element={<TwClasses />} />
+            {/* <Route path='/temp' element={<TwClasses />} /> */}
           </Route>
           <Route element={<AdminLayout />}>
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/admin/users" element={<AdminUsers />} />
             <Route path="/admin/settings" element={<AdminSettings />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>

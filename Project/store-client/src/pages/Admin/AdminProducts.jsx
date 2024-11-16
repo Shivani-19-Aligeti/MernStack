@@ -7,7 +7,6 @@ import {
   deleteProduct,
   editProduct,
 } from "../../api/api";
-import { toast } from "sonner";
 
 const AdminProducts = () => {
   //null -> products[] | Store the data

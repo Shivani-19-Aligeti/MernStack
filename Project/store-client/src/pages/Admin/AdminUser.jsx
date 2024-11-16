@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import AdminPageHeader from "../../components/Admin/AdminPageHeader";
 import { Loader2, Pencil, Plus, Trash, TriangleAlert, X } from "lucide-react";
 import { getUsers, addUser, editUser, deleteUser } from "../../api/api";
-import { toast } from "sonner";
 
 const AdminUsers = () => {
   const [users, setUsers] = useState(null);

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Orders = require("../models/OrdersModel");
+const Orders = require("../models/OrderModel");
 const validate = require("../config/auth");
 
 router.get("/count", async (req, res) => {

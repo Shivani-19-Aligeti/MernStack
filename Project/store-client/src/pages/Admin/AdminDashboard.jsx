@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AdminDashboardHomeCards from "../../components/Admin/AdminDashboardHomeCards";
 import { getOrdersCount, getProductsCount, getUsersCount } from "../../api/api";
-import { toast } from "sonner";
+
 const AdminDashboard = () => {
   const [users, setUsers] = useState(0);
   const [products, setProducts] = useState(0);
